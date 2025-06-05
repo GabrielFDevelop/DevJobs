@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function Header(){
     return (
-        <header className="flex px-2 py-5 bg-gray-700 text-white">
+        <header className="flex px-2 py-4 bg-gray-700 text-white">
             <div className='flex items-center justify-between w-full'>
                 <div>
                     <h2 className='pl-10'>DevJobs</h2>
