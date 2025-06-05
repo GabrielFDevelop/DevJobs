@@ -12,7 +12,7 @@ interface ResponseProps {
 export default async function Vagas() {
 
     const response = await fetch('https://devjobs.io/api/jobs')  //preciso criar uma api pra chamar aqui
-    const data: ResponseProps = await response.json()
+    const data: ResponseProps = await response.json() // chamando a api e convertendo para json
 
     console.log(data);
     
