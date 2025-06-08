@@ -1,10 +1,11 @@
-import style from './page.module.css'
+import style from './page.module.css';
+import ImgLogin from '@/components/imgLogin';
 
 export default function LoginPage() {
     return(
         <div className={style.bodyLogin}>
+            <h1 className={style.titleLogin}>Login</h1>
             <div className={style.boxLogin}>
-                <h1 className={style.titleLogin}>Login</h1>
                 <ul className={style.listLogin}>
                     <li>
                         <p>Email</p>
@@ -19,6 +20,7 @@ export default function LoginPage() {
                         <button className={style.buttonEntrar}>Entrar</button>
                     </li>
                 </ul>
+                <ImgLogin />
             </div>
         </div>
     )
