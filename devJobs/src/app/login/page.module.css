@@ -1,0 +1,46 @@
+.bodyLogin{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.boxLogin{
+    margin: 80px;
+    padding: 20px 80px 60px 80px;
+    border-radius: 20px;
+    justify-items: center;
+}
+
+.titleLogin{
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.listLogin{
+    justify-items: center;
+    padding: 20px 0 0 0;
+}
+
+.inputEmail{
+    margin: 5px 0 20px 0;
+    padding: 5px 200px 5px 20px;
+    border: solid 1px rgb(37, 147, 161);
+    border-radius: 10px;
+}
+
+.inputSenha{
+    margin: 5px 0 20px 0;
+    padding: 5px 200px 5px 20px;
+    border: solid 1px rgb(37, 147, 161);
+    border-radius: 10px;
+}
+
+.buttonEntrar{
+    margin: 10px 0 0 0;
+    padding: 5px 150px 5px 150px;
+    border: solid 1px rgb(56, 81, 151);
+    background-color: rgb(13, 95, 172);
+    color: aliceblue;
+    border-radius: 10px;
+}
