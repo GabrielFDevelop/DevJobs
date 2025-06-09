@@ -20,7 +20,7 @@
     .boxCadastro{
         display: flex;
         flex-direction: column;
-        margin:  100px 55rem 0 20rem;
+        margin:  100px 90rem 0 20rem;
 
         .titleCadastroForm{
             font-size: 30px;
@@ -31,6 +31,11 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+            .textLabel{
+                font-size: 18px;
+                margin: 0 0 0 20px;
+            }
 
             .inputNome{
                 margin: 5px 0 20px 0;
@@ -78,7 +83,7 @@
             }
             
             .buttonCadastro{
-                margin: 10px 3.8rem 0 0;
+                margin: 10px 10rem 0 0;
                 padding: 5px 0px 5px 0px;
                 border: solid 1px rgb(56, 81, 151);
                 background-color: rgb(13, 95, 172);
@@ -101,7 +106,7 @@
 
         .buttonRedirectLogin{
             text-align: center;
-            margin: 0 12rem 0 0;
+            margin: 0 18rem 0 0;
             padding: 5px 0px 5px 0px;
             border: solid 1px rgb(56, 81, 151);
             background-color: rgb(13, 95, 172);
