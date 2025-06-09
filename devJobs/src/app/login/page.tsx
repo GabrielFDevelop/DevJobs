@@ -1,26 +1,30 @@
-import style from './page.module.css';
-import ImgLogin from '@/components/imgLogin';
+import style from './login.module.css';
 
 export default function LoginPage() {
     return(
         <div className={style.bodyLogin}>
-            <h1 className={style.titleLogin}>Login</h1>
+            <h1 className={style.titleLogin}>Seja bem vindo!</h1>
             <div className={style.boxLogin}>
-                <ul className={style.listLogin}>
-                    <li>
-                        <p>Email</p>
-                        <input className={style.inputEmail} type="text" placeholder='seuemail@exxxemplo.com' />
-                    </li>
-                    <li>
-                        <p>Senha</p>
-                        <input className={style.inputSenha} type="text" placeholder='Digite sua senha' />    
-                    </li>
-                    <a href='/trocaSenha' >Esqueceu a senha?</a>
-                    <li>
-                        <button className={style.buttonEntrar}>Entrar</button>
-                    </li>
-                </ul>
-                <ImgLogin />
+                <div className={style.boxListLogin}>
+                    <ul className={style.listLogin}>
+                        <li>
+                            <p>Email</p>
+                            <input type='text' name='email' className={style.inputEmail} placeholder='seuemail@exxxemplo.com' />
+                        </li>
+                        <li>
+                            <p>Senha</p>
+                            <input type='password' name='senha' className={style.inputSenha} placeholder='Digite sua senha' />    
+                        </li>
+                        <li>
+                            <button type='submit' name='buttonLogin' className={style.buttonEntrar}>Entrar</button>
+                        </li>
+                    </ul>
+                    <a href='/trocaSenha'>Esqueceu a senha?</a>
+                </div>
+                <div className={style.boxRedirectCadastro}>
+                    <h3 className={style.textRedirectCadastro}>Ainda não tem uma conta?</h3>
+                    <a className={style.buttonRedirectCadastro} href='/cadastro'>Cadastre-se</a>
+                </div>
             </div>
         </div>
     )

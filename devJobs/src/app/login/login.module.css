@@ -1,0 +1,85 @@
+.bodyLogin{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: #f0f8ff;    
+    
+    .titleLogin{
+        font-size: 50px;
+        margin: 70px 0 0 0;
+    }
+    
+    .boxLogin{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: 80px;
+        padding: 20px 0px 60px 0px;
+        border-radius: 20px;
+        gap: 15em;
+
+        .boxListLogin{
+            justify-items: center;
+            
+            .listLogin{
+                justify-items: center;
+                padding: 100px 0 50px 0;
+            
+                .inputEmail{
+                    margin: 5px 0 20px 0;
+                    padding: 10px 200px 10px 20px;
+                    border: solid 1px rgb(37, 147, 161);
+                    border-radius: 13px;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    background-color: aliceblue;
+                }
+            
+                .inputSenha{
+                    margin: 5px 0 20px 0;
+                    padding: 10px 200px 10px 20px;
+                    border: solid 1px rgb(37, 147, 161);
+                    border-radius: 13px;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    background-color: aliceblue;
+                }
+                
+                .buttonEntrar{
+                    margin: 10px 0 0 0;
+                    padding: 5px 150px 5px 150px;
+                    border: solid 1px rgb(56, 81, 151);
+                    background-color: rgb(13, 95, 172);
+                    color: aliceblue;
+                    border-radius: 20px;
+                    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+                }
+            }
+
+        }
+    }
+    
+    .boxRedirectCadastro{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin:  0 0 100px 0;
+
+        .textRedirectCadastro{
+            font-size: 30px;
+        }
+
+        .buttonRedirectCadastro{
+            padding: 5px 150px 5px 150px;
+            border: solid 1px rgb(56, 81, 151);
+            background-color: rgb(13, 95, 172);
+            color: aliceblue;
+            border-radius: 20px;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        }
+    }
+}    
