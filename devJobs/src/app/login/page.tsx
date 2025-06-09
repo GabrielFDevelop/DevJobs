@@ -1,5 +1,4 @@
-import style from './page.module.css';
-import ImgLogin from '@/components/imgLogin';
+import style from './login.module.css';
 
 export default function LoginPage() {
     return(
@@ -10,14 +9,14 @@ export default function LoginPage() {
                     <ul className={style.listLogin}>
                         <li>
                             <p>Email</p>
-                            <input type="text" className={style.inputEmail} placeholder='seuemail@exxxemplo.com' />
+                            <input type='text' name='email' className={style.inputEmail} placeholder='seuemail@exxxemplo.com' />
                         </li>
                         <li>
                             <p>Senha</p>
-                            <input type="text" className={style.inputSenha} placeholder='Digite sua senha' />    
+                            <input type='password' name='senha' className={style.inputSenha} placeholder='Digite sua senha' />    
                         </li>
                         <li>
-                            <button type='submit' className={style.buttonEntrar}>Entrar</button>
+                            <button type='submit' name='buttonLogin' className={style.buttonEntrar}>Entrar</button>
                         </li>
                     </ul>
                     <a href='/trocaSenha'>Esqueceu a senha?</a>
