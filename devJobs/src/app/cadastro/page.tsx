@@ -11,23 +11,23 @@ export default async function telaCadastro() {
                 <form className={style.formCadastro}>
                     <label>
                         <p>Nome:</p>
-                        <input type='text' name='nome' className={style.inputNome}/>
+                        <input type='text' name='nome' className={style.inputNome} placeholder='Digite seu nome completo'/>
                     </label>
                     <label>
                         <p>CPF:</p>
-                        <input type='text' name='cpf' className={style.inputCpf}/>
+                        <input type='text' name='cpf' className={style.inputCpf} placeholder='Digite seu CPF'/>
                     </label>
                     <label>
                         <p>Email:</p>
-                        <input type='email' name='email' className={style.inputEmail}/>
+                        <input type='email' name='email' className={style.inputEmail} placeholder='seuemail@exemplo.com'/>
                     </label>
                     <label>
                         <p>Senha:</p>
-                        <input type='password' name='senha' className={style.inputSenha}/>
+                        <input type='password' name='senha' className={style.inputSenha} placeholder='Digite sua senha'/>
                     </label>
                     <label>
                         <p>Confirme a senha:</p>
-                        <input type='password' name='confirmeSenha' className={style.inputConfirmaSenha}/>
+                        <input type='password' name='confirmeSenha' className={style.inputConfirmaSenha} placeholder='Confirme sua senha'/>
                     </label>
                     <button type='submit' name='buttonCadastro' className={style.buttonCadastro}>Cadastrar</button>
                 </form>
