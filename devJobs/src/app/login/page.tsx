@@ -3,8 +3,8 @@ import style from './login.module.css';
 export default function LoginPage() {
     return(
         <div className={style.bodyLogin}>
-            <h1 className={style.titleLogin}>Seja bem vindo!</h1>
             <div className={style.boxLogin}>
+            <h1 className={style.titleLogin}>Seja bem vindo!</h1>
                 <div className={style.boxListLogin}>
                     <ul className={style.listLogin}>
                         <li>
