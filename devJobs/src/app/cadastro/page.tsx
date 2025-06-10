@@ -3,10 +3,10 @@ import style from './cadastro.module.css';
 export default async function telaCadastro() {
     return (
         <div className={style.bodyCadastro}>
-            <div className={style.topCadastro}>
-                <h1 className={style.titleCadastro}>Faça seu cadastro no nosso site para encontrar as vagas certas para você!</h1>
-            </div>
             <div className={style.boxCadastro}>
+            <div className={style.topCadastro}>
+                <h1 className={style.titleCadastro}>Realize seu cadastro</h1>
+            </div>
                 <h1 className={style.titleCadastroForm}>Insira os dados solicitados abaixo</h1>
                 <form className={style.formCadastro}>
                     <label>
