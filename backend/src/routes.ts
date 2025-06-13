@@ -1,5 +1,6 @@
 import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from 'fastify';
 import { CreateVagaController } from './controllers/CreateVagaController';
+import { ListVagasController } from './controllers/ListVagasController';
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions){
     
@@ -9,5 +10,9 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
 
     fastify.post("/vaga", async (request: FastifyRequest, reply: FastifyReply) => {
         return new CreateVagaController().handle(request, reply)
+    })
+
+    fastify.get("/vagas", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new ListVagasController().handle(request, reply)
     })
 }
