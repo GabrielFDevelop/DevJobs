@@ -1,48 +1,69 @@
 .bodyCadastro{
 	display: flex;
+	align-items: center;
 	width: 100%;
-	height: 100vh;
-	flex-direction: column;
-	margin: 0;
-	padding: 0;
+	height: 95.4vh;
 	background-color: #71a6b6;
 	
 	.topCadastro{
 		display: flex;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		
 		.titleCadastro{
 			font-size: 45px;
-			margin: 20px 0 20px 0;
 			font-weight: bold;
+		}
+		
+		.titleCadastroForm{
+			font-size: 28px;
+			margin: 0 0 20px 0;
 		}
 	}
 	
+	.midBoxCadastro{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 200px;
+		margin: 30px 0;
+	}
+
 	.boxCadastro{
+		width: 70%;
+		height: 80%;
 		display: flex;
 		flex-direction: column;
-		margin:  80px 20rem 0 20rem;
-		padding: 40px 60px 0px 60px;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		padding: 200px 50px 200px 50px;
 		background-color: #f0f8ff;
 		border-radius: 50px;
 		box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
 
-		.titleCadastroForm{
-			font-size: 28px;
-			margin: 0 0 20px 36rem;
-		}
-
 		.formCadastro{
+			gap: 10px;
+			margin: 0 50px;
+			padding: 0;
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
-			margin: 0 63rem 0 50px;
-			padding: 0;
+			justify-content: center;
+			align-items: center;
 
 			.textLabel{
 				font-size: 18px;
-				margin: 0 0 0 20px;
+				margin: 0 20px;
 			}
+
+			.labelFormCadastro{
+				display: flex;
+				justify-content: start;
+				flex-direction: column;
+				margin: 0;
+				padding: 0;
+	 		}
 
 			.inputNome{
 				margin: 5px 0 20px 0;
@@ -95,23 +116,32 @@
 			}
 			
 			.buttonCadastro{
-				margin: 10px 1rem 0 1rem;
-				padding: 5px 0px 5px 0px;
+				margin: 10px 1px 0 1px;
+				padding: 10px 150px 10px 150px;
 				border: solid 1px rgb(56, 81, 151);
 				font-size: 20px;
 				background-color: rgb(13, 95, 172);
 				color: aliceblue;
 				border-radius: 20px;
 				box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+				&:hover{
+					background-color: rgb(2, 73, 139);
+					border: solid 1px rgb(62, 107, 153);
+					cursor: pointer;
+				}
 			}
 		}
+	}
+
+	.divImgCadastro{
+		margin: 0 0 80px 0;
 	}
 
 	.boxRedirectLogin{
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin:  50px 63rem 80px 20px;
+		margin: 10px 0 0 0;
 		padding: 0 0 0 20px;
 
 		.textRedirectLogin{
@@ -128,6 +158,10 @@
 			color: aliceblue;
 			border-radius: 20px;
 			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+			&:hover{
+				background-color: rgb(2, 73, 139);
+				border: solid 1px rgb(62, 107, 153);
+			}
 		}
 	}
 }
