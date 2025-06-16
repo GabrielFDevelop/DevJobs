@@ -1,6 +1,7 @@
 import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from 'fastify';
-import { CreateVagaController } from './controllers/CreateVagaController';
-import { ListVagasController } from './controllers/ListVagasController';
+import { CreateUserController } from './controllers/CreateUserController';
+import { ListUsersController } from './controllers/ListUsersController';
+import { DeleteUserController } from './controllers/DeleteUserController';
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions){
     
@@ -8,11 +9,15 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
         return { ok:true }
     })
 
-    fastify.post("/vaga", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new CreateVagaController().handle(request, reply)
+    fastify.post("/user", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new CreateUserController().handle(request, reply)
     })
 
-    fastify.get("/vagas", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new ListVagasController().handle(request, reply)
+    fastify.get("/users", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new ListUsersController().handle(request, reply)
+    })
+
+    fastify.delete("/user", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new DeleteUserController().handle(request, reply)
     })
 }

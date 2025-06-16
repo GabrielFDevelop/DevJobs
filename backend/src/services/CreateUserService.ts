@@ -1,27 +1,27 @@
 import prismaClient from "../prisma";
 
-interface CreateVagaProps{
+interface CreateUserProps{
     name: string;
     email: string;
 }
 
-class CreateVagaService {
-    async execute({ name, email }: CreateVagaProps) {
+class CreateUserService {
+    async execute({ name, email }: CreateUserProps) {
 
         if(!name || !email) {
             throw new Error("Nome e email são obrigatórios!");
         }
 
-        const vaga = await prismaClient.customer.create({
+        const user = await prismaClient.customer.create({
             data:{
                 name,
                 email,
                 status: true
             }
         })
-        
-        return vaga;
+    
+        return user ;
     }
 }
 
-export { CreateVagaService };
+export { CreateUserService };
