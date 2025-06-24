@@ -2,10 +2,14 @@ import React from "react";
 import Image from "next/image";
 import imgCadastro from "../../../public/file-alt-svgrepo-com.svg";
 
-const ImgBoxCadastro = () => {
+interface ImgBoxCadastroProps {
+	width: number;
+}
+
+const ImgBoxCadastro: React.FC<ImgBoxCadastroProps> = ({width}) => {
 	return(
 		<div>
-			<Image src={imgCadastro} alt="imgLogin" width={400} />
+			<Image src={imgCadastro} alt="imgLogin" width={width} />
 		</div>
 	)
 }
