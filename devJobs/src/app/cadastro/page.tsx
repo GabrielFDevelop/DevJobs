@@ -48,7 +48,7 @@ export default async function telaCadastro() {
 						</form>
 					</div>
 					<div className={style.divImgCadastro}>
-						<ImgBoxCadastro />
+						<ImgBoxCadastro width={400} />
 					</div>
 				</div>
 			</div>
