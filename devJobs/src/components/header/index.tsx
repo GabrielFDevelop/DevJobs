@@ -2,6 +2,7 @@ import Link from 'next/link';
 import ImgPerfil from './headerIcons/iconPerfil';
 import ImgBoxCadastro from '../imgBoxCadastro';
 import ImgVagas from '../imgVagas';
+import ImgHeaderHome from '../imgHeaderHome';
 
 export function Header(){
 	return (
@@ -16,6 +17,7 @@ export function Header(){
 							<li className='flex items-center gap-1 '>
 								<Link href={"/"} className='text-white mr-10 text-2xl hover:text-gray-300 transform-3d hover:scale-105 transition-all duration-400 ease-in-out'>
 									Home
+									<ImgHeaderHome />
 								</Link>
 							</li>    
 							<li className='flex items-center gap-1 '>
