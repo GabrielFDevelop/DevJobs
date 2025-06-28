@@ -2,10 +2,14 @@ import React from "react";
 import Image from "next/image";
 import imgLogin from "../../../public/id-card-clip-svgrepo-com.svg";
 
-const ImgBoxLogin = () => {
+interface ImgBoxLoginProps {
+	width: number;
+}
+
+const ImgBoxLogin: React.FC<ImgBoxLoginProps> = ({width}) => {
 	return(
 		<div>
-			<Image src={imgLogin} alt="imgLogin" width={400} />
+			<Image src={imgLogin} alt="imgLogin" width={width} />
 		</div>
 	)
 }

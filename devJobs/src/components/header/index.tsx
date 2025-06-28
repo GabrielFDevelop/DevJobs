@@ -17,25 +17,25 @@ export function Header(){
 							<li className='flex items-center gap-1 '>
 								<Link href={"/"} className='text-white mr-10 text-2xl hover:text-gray-300 transform-3d hover:scale-105 transition-all duration-400 ease-in-out'>
 									Home
-									<ImgHeaderHome />
+									<ImgHeaderHome width={60} />
 								</Link>
 							</li>    
 							<li className='flex items-center gap-1 '>
 								<Link href={"/vagas"} className='text-white mr-10 text-2xl hover:text-gray-300 transform-3d hover:scale-105 transition-all duration-400 ease-in-out'>
 									Vagas
-									<ImgVagas />
+									<ImgVagas width={60} />
 								</Link>
 							</li>
 							<li className='flex items-center gap-1 '>
 								<Link href={"/cadastro"} className='text-white mr-10 text-2xl hover:text-gray-300 transform-3d hover:scale-105 transition-all duration-400 ease-in-out'>
 									Cadastre-se
-									<ImgBoxCadastro width={70} />
+									<ImgBoxCadastro width={60} />
 								</Link>
 							</li>
 							<li className='flex items-center gap-1 '>
 								<Link href={"/perfil"} className='text-white mr-10 text-2xl hover:text-gray-300 transform-3d hover:scale-105 transition-all duration-400 ease-in-out'>
 									Perfil
-									<ImgPerfil />
+									<ImgPerfil width={60} />
 								</Link>
 							</li>
 						</ul>
