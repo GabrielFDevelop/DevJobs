@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import imgCadastro from "../../../public/file-alt-svgrepo-com.svg";
+import imgCadastro from "../../../../../public/file-alt-svgrepo-com.svg";
 
 interface ImgBoxCadastroProps {
 	width: number;

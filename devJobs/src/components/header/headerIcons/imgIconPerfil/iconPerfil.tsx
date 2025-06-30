@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import imgPerfil from "../../../../public/circle-user-svgrepo-com.svg";
+import imgPerfil from "../../../../../public/circle-user-svgrepo-com.svg";
 
 interface ImgPerfilProps {
 	width?: number;

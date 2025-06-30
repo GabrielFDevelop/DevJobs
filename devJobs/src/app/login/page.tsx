@@ -1,5 +1,5 @@
 import style from './login.module.css';
-import ImgBoxLogin from '@/components/imgBoxLogin';
+import ImgBoxLogin from '@/components/header/headerIcons/imgBoxLogin/imgBoxLogin';
 
 export default function LoginPage() {
 	return(
@@ -30,7 +30,7 @@ export default function LoginPage() {
 						</div>
 					</div>
 					<div className={style.imgBoxLogin}>
-						<ImgBoxLogin />
+						<ImgBoxLogin width={400} />
 					</div>
 				</div>
 			</div>
