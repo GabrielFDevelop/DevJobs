@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import imgVagas from "../../../public/suitcase-svgrepo-com.svg";
+import imgVagas from "../../../../../public/suitcase-svgrepo-com.svg";
 
 interface ImgVagasProps {
 	width: number;

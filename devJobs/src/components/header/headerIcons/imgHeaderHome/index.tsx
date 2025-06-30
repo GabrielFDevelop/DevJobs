@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import imgHeaderHome from "../../../public/house-chimney-blank-svgrepo-com.svg";
+import imgHeaderHome from "../../../../../public/house-chimney-blank-svgrepo-com.svg";
 
 interface ImgHeaderHomeProps {
 	width: number;

@@ -1,6 +1,6 @@
 import style from './cadastro.module.css';
 import React from 'react';
-import ImgBoxCadastro from '@/components/imgBoxCadastro';
+import ImgBoxCadastro from '@/components/header/headerIcons/imgBoxCadastro';
 
 export default async function telaCadastro() {
 	return (
