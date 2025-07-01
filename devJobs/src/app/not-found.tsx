@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 import ImgCrossCloud from "@/components/not-found/not-foundicons/crossCloudIcon/crossCloudIcon";
 import ImgArrowRight from '@/components/not-found/not-foundicons/arrowRightIcon/arrowRightIcon';
 import ImgQuestionIcon from '@/components/not-found/not-foundicons/questionIcon/questionIcon';
@@ -17,7 +17,7 @@ export default function NotFound(){
 				<p className="mt-3 text-3xl">A página que você está procurando não existe.</p>
 
 				<Link href="/" className='text-2xl'>
-					<span className="flex items-center gap-3 mt-10 text-blue-500 hover:text-blue-700 transition-colors duration-200">
+					<span className="flex items-center gap-3 mt-10 text-blue-500 hover:text-blue-700 transform-3d hover:scale-120 transition-all ease-in-out duration-400">
 						Voltar para Home
 						<ImgHeaderHome width={40} />
 					</span>
