@@ -1,0 +1,48 @@
+.bodyPerfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .boxPerfil{
+    display: flex;
+		flex-direction: row;
+    width: 97%;
+		height: 90vh;
+    margin: 20px 0 20px 0;
+    padding: 50px 30px 50px 30px;
+		border-radius: 50px;
+		background-color: #f3f4f6;
+		box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+
+    .menuPerfil{
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      background-color: #ffffff;
+      border-radius: 50px;
+      margin-right: 30px;
+      padding: 60px 30px;
+      box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.10);
+
+      .itemListMenuPerfil{
+        display: flex;
+      }
+    }
+
+    .contentItemMenuPerfil{
+      display: flex;
+      width: 75%;
+      justify-content: center;
+      background-color: #ffffff;
+      border-radius: 50px;
+      padding: 60px 50px;
+      box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.10);
+    
+      .titlePerfil{
+        font-size: 50px;
+        font-weight: bold;
+      }
+    }
+  }
+}

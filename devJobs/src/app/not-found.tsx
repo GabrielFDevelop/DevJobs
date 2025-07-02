@@ -6,7 +6,7 @@ import ImgHeaderHome from '@/components/header/headerIcons/imgHeaderHome';
 
 export default function NotFound(){
 	return(
-		<div className="flex flex-col items-center pt-20 pb-109 justify-center bg-gray-400">
+		<div className="flex flex-col items-center pt-20 pb-109 justify-center">
 			<div className='flex flex-col items-center justify-center p-20 bg-white rounded-4xl shadow-lg '>
 				<span className="flex items-center gap-3 mt-20">
 					<ImgCrossCloud width={180} />

@@ -3,7 +3,7 @@ import ImgVagas from '@/components/header/headerIcons/imgVagas';
 
 export default function Home(){
   return(
-    <div className='flex flex-col items-center justify-center min-h-screen bg-gray-400 p-4'>
+    <div className='flex flex-col items-center justify-center min-h-screen p-4'>
       <article className='bg-white rounded-4xl shadow-lg m-10 p-10 h-300 w-full'>
         <div className='flex items-center justify-center mb-20'>
           <h1 className='text-5xl font-bold'>Sobre o Projeto</h1>
