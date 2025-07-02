@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './perfil.module.css';
+import { PerfilInformacoes } from '@/components/perfil/perfilInformacoes';
 
 export default function PerfilPage() {
   return (
@@ -21,8 +22,8 @@ export default function PerfilPage() {
             </li>
           </ul>
         </div>
-        <div className={style.contentItemMenuPerfil}>
-          <h1 className={style.titlePerfil}>Informações do Perfil</h1>
+        <div className={style.contentSelectedPerfil}>
+          <PerfilInformacoes />
         </div>
       </div>
     </div>
