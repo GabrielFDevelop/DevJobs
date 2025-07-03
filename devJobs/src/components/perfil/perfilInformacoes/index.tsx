@@ -1,17 +1,17 @@
 import ImgPerfil from '@/components/header/headerIcons/imgIconPerfil/iconPerfil';
-import style from '../../../app/perfil/perfil.module.css';
+import style from './perfilInformacoes.module.css';
 
 export function PerfilInformacoes(){
   return(
-    <div className={style.contentItemMenuPerfil}>
-      <div>
-        <h1 className={style.titlePerfil}>Informações do Perfil</h1>
-      </div>
-      <div className={style.contentInfoPerfil}>
+    <main className={style.contentInfoPerfil}>
+      <section>
+        <h1 className={style.titleInfoPerfil}>Informações do Perfil</h1>
+      </section>
+      <section className={style.contentInfoPerfil}>
         <span className={style.spanInfoPerfil}>
-          <div className={style.contentInfoPerfilFoto}>
+          <figure className={style.contentInfoPerfilFoto}>
             <ImgPerfil width={200} />
-          </div>
+          </figure>
           <div className={style.textInfoPerfil}>
             <p><em>Nome do Usuário</em></p>
             <p>Email: <em>exemplo@exemplo.com</em></p>
@@ -22,8 +22,8 @@ export function PerfilInformacoes(){
             <p>Empresa: <em>Exemplo do Exemplo</em></p>
           </div>
         </span>
-      </div>
-      <div className={style.contentInfoPerfil}>  
+      </section>
+      <section className={style.contentInfoPerfil}>  
         <span className={style.spanInfoPerfil}>
           <div className={style.textInfoPerfil}>
             <p>Rua: <em>Exemplo do Exemplo</em></p>
@@ -37,7 +37,7 @@ export function PerfilInformacoes(){
             <p>CEP: <em>xxxxx-xxx</em></p>
           </div>
         </span>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
