@@ -9,7 +9,9 @@ export function PerfilInformacoes(){
       </div>
       <div className={style.contentInfoPerfil}>
         <span className={style.spanInfoPerfil}>
-          <ImgPerfil width={200} />
+          <div className={style.contentInfoPerfilFoto}>
+            <ImgPerfil width={200} />
+          </div>
           <div className={style.textInfoPerfil}>
             <p><em>Nome do Usuário</em></p>
             <p>Email: <em>exemplo@exemplo.com</em></p>
