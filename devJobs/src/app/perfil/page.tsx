@@ -24,7 +24,6 @@ export default function PerfilPage() {
   //Aqui está sendo declarada a seção ativa do menu lateral com useState( no caso 'InfoPerfil') que permite adicionar um estado que muda com a interação.
   const [activeSection, setActiveSection] = useState('infoPerfil');
 
-
   //Aqui está sendo feita a função que vai aparecer na tela o conteúdo correspondente ao menu lateral.
   const renderContent = () => {
     switch (activeSection) {
