@@ -21,7 +21,10 @@ export default function PerfilConfiguracoes() {
           <li>
             <label>
               <span className={style.spanItemListConfigPerfil}>
-                Qual o idioma de sua preferência?<input className={style.inputIdiomaListConfigPerfil} type="checkbox" />
+                Idioma<select className={style.buttonIdiomaListConfigPerfil}>
+                  <option className={style.optionIdioma} value="pt-br">Português(Brasil)</option>
+                  <option className={style.optionIdioma} value="en-us">English</option>
+                </select>
               </span>
             </label>
           </li>
@@ -29,13 +32,6 @@ export default function PerfilConfiguracoes() {
             <label>
               <span className={style.spanItemListConfigPerfil}>
                 Qual tema deseja usar? Claro ou escuro?<input className={style.inputTemaListConfigPerfil} type="checkbox" />
-              </span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <span className={style.spanItemListConfigPerfil}>
-                Segurança<input className={style.inputItemListConfigPerfil} type="checkbox" />
               </span>
             </label>
           </li>

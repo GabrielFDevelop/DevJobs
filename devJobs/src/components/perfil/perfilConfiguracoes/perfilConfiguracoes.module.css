@@ -18,23 +18,21 @@
   .listConfigPerfil{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
     gap: 24px;
     font-size: 30px;
     list-style: none;
 
     .spanItemListConfigPerfil{
       display: flex;
-      flex-direction: row;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
       width: 100%;
       padding: 0 150px 0 0;
+      margin: 0 700px 0 0;
 
       .inputNotificacaoListConfigPerfil{
         display: flex;
-        margin: 0 90px 0 800px;
         width: 30px;
         height: 30px;
         cursor: pointer;
@@ -43,20 +41,26 @@
         box-shadow: 0px 2px 2px rgba(0, 0, 0.10, 0.20);
       }
 
-      .inputIdiomaListConfigPerfil{
+      .buttonIdiomaListConfigPerfil{
         display: flex;
-        margin: 0 90px 0 642px;
-        width: 30px;
-        height: 30px;
+        justify-content: center;
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
         cursor: pointer;
-        border-radius: 50%;
-        border: 1px solid #e5e7eb;
+        appearance: none;
+        padding: 5px;
+        border-radius: 10px;
+        border: 2px solid #333435;
         box-shadow: 0px 2px 2px rgba(0, 0, 0.10, 0.20);
+
+        .optionIdioma:hover{
+          cursor: pointer;
+        }
       }
 
       .inputTemaListConfigPerfil{
         display: flex;
-        margin: 0 90px 0 546px;
         width: 30px;
         height: 30px;
         cursor: pointer;
