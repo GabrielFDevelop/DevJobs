@@ -18,7 +18,7 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
         return new ListUsersController().handle(request, reply)
     });
 
-    fastify.delete("/user", async (request: FastifyRequest, reply: FastifyReply) => {
+    fastify.delete("/deleteUser", async (request: FastifyRequest, reply: FastifyReply) => {
         return new DeleteUserController().handle(request, reply)
     });
 }
