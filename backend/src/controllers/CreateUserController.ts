@@ -1,4 +1,3 @@
-import { PrismaClient } from './../generated/prisma/index.d';
 import { FastifyRequest, FastifyReply } from 'fastify';
 import bcrypt from 'bcrypt';
 import prismaClient from '../prisma';

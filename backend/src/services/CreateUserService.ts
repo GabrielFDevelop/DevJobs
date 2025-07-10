@@ -13,7 +13,7 @@ class CreateUserService {
             throw new Error("Nome, email e senha são obrigatórios!");
         }
 
-        const user = await prismaClient.customer.create({
+        const user = await prismaClient.user.create({
             data:{
                 name,
                 email,
