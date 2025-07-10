@@ -6,7 +6,6 @@ import style from './perfil.module.css';
 import { PerfilInformacoes } from '@/components/perfil/perfilInformacoes';
 import PerfilConfiguracoes from '@/components/perfil/perfilConfiguracoes';
 import PerfilMinhasVagas from '@/components/perfil/perfilMinhasVagas';
-import PerfilSeguranca from '@/components/perfil/perfilSeguranca';
 
 export default function PerfilPage() {
 
@@ -32,8 +31,6 @@ export default function PerfilPage() {
         return <PerfilInformacoes />;
       case 'minhasVagasPerfil':
         return <PerfilMinhasVagas />;
-      case 'perfilSeguranca':
-        return <PerfilSeguranca />;
       case 'configuracoesPerfil':
         return <PerfilConfiguracoes />;
 
