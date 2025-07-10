@@ -6,11 +6,12 @@ import style from './perfil.module.css';
 import { PerfilInformacoes } from '@/components/perfil/perfilInformacoes';
 import PerfilConfiguracoes from '@/components/perfil/perfilConfiguracoes';
 import PerfilMinhasVagas from '@/components/perfil/perfilMinhasVagas';
+import PerfilSeguranca from '@/components/perfil/perfilSeguranca';
 
 export default function PerfilPage() {
 
   // Aqui está sendo declarada as seções do menu lateral que são permitidas para validação.
-  const allowedSection = ['infoPerfil', 'minhasVagasPerfil', 'configuracoesPerfil', 'sairPerfil'];
+  const allowedSection = ['infoPerfil', 'minhasVagasPerfil', 'perfilSeguranca', 'configuracoesPerfil', 'sairPerfil'];
 
   //Aqui está sendo feita a função que vai mudar a seção do menu lateral com validação se a seção está definida ou não.
   const handleSectionChange = (section: string) => {
@@ -31,8 +32,11 @@ export default function PerfilPage() {
         return <PerfilInformacoes />;
       case 'minhasVagasPerfil':
         return <PerfilMinhasVagas />;
+      case 'perfilSeguranca':
+        return <PerfilSeguranca />;
       case 'configuracoesPerfil':
         return <PerfilConfiguracoes />;
+
       case 'sairPerfil':
         return <div><em>Ainda tenho que implementar pra sair do perfil AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</em></div>;
       default:
@@ -50,6 +54,9 @@ export default function PerfilPage() {
             </li>
             <li className={style.itemListMenuPerfil}>
               <button type='button' onClick={() => handleSectionChange('minhasVagasPerfil')} className={style.buttonListMenuPerfil}>Minhas Vagas</button>
+            </li>
+            <li className={style.itemListMenuPerfil}>
+              <button type='button' onClick={() => handleSectionChange('perfilSeguranca')} className={style.buttonListMenuPerfil}>Segurança</button>
             </li>
             <li className={style.itemListMenuPerfil}>
               <button type='button' onClick={() => handleSectionChange('configuracoesPerfil')} className={style.buttonListMenuPerfil}>Configurações</button>

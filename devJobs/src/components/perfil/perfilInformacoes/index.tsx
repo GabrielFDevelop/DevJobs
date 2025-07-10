@@ -13,12 +13,12 @@ export function PerfilInformacoes(){
             <ImgPerfil width={200} />
           </figure>
           <div className={style.textInfoPerfil}>
-            <p><em>Nome do Usuário</em></p>
+            <p><em>Nome da Empresa</em></p>
             <p>Email: <em>exemplo@exemplo.com</em></p>
             <p>Celular: <em>(xx) xxxxx-xxxx</em> </p>
           </div>
           <div className={style.textInfoPerfil}>
-            <p>Profissão: <em>Exemplo do Exemplo</em></p>
+            <p>CNPJ: <em>xx.xxx.xxx/xxxx-xx</em></p>
             <p>Empresa: <em>Exemplo do Exemplo</em></p>
           </div>
         </span>
