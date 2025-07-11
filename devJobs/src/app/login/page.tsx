@@ -5,18 +5,20 @@ import { useForm } from 'react-hook-form';
 import style from './login.module.css';
 import ImgBoxLogin from '@/components/header/headerIcons/imgBoxLogin/imgBoxLogin';
 
+//Aqui está sendo definido o tipo de dados que o formulário irá receber,
 type FormData = {
 	email: string;
 	senha: string;
 };
 
 export default function LoginPage() {
+	//Aqui está sendo utilizado o hook useForm do react-hook-form para gerenciar o estado do formulário.
 	const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
 
 	const handleLogin = async (data: FormData) => {
 	
 		try {
-			const res = await fetch('https://localhost:3001/login', {
+			const res = await fetch('http://localhost:3001/login', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -31,6 +33,7 @@ export default function LoginPage() {
 				return;
 			}
 
+			// Armazenando o token e os dados do usuário no localStorage
 			localStorage.setItem('token', responseData.token);
 			localStorage.setItem('email', data.email);
 			localStorage.setItem('user', JSON.stringify(responseData.user));

@@ -1,7 +1,32 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import ImgPerfil from '@/components/header/headerIcons/imgIconPerfil/iconPerfil';
 import style from './perfilInformacoes.module.css';
 
+// Definindo o tipo de dados do usuário
+type User = {
+  id: string;
+  name: string;
+  email: string;
+}
+
 export function PerfilInformacoes(){
+  // Estado para armazenar os dados do usuário
+  const [user, setUser] = React.useState<User | null>(null);
+
+  // Efeito para carregar os dados do usuário do localStorage quando o componente é montado
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  if (!user) {
+    return <div className={style.loading}>Carregando...</div>;
+  }
+
   return(
     <main className={style.contentInfoPerfil}>
       <section>
