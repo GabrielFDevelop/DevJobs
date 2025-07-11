@@ -7,17 +7,18 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
     
     fastify.get("/teste", async (request: FastifyRequest, reply: FastifyReply) => {
         return { ok:true }
-    })
+    });
 
-    fastify.post("/user", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new CreateUserController().handle(request, reply)
-    })
+    //aqui definimos a rota de registro de usuário e vinculamos o método register do CreateUserController para lidar com a lógica de criação de usuário
+    fastify.post("/register", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new CreateUserController().register(request, reply)
+    });
 
     fastify.get("/users", async (request: FastifyRequest, reply: FastifyReply) => {
         return new ListUsersController().handle(request, reply)
-    })
+    });
 
-    fastify.delete("/user", async (request: FastifyRequest, reply: FastifyReply) => {
+    fastify.delete("/deleteUser", async (request: FastifyRequest, reply: FastifyReply) => {
         return new DeleteUserController().handle(request, reply)
-    })
+    });
 }

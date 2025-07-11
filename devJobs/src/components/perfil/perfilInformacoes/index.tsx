@@ -1,0 +1,43 @@
+import ImgPerfil from '@/components/header/headerIcons/imgIconPerfil/iconPerfil';
+import style from './perfilInformacoes.module.css';
+
+export function PerfilInformacoes(){
+  return(
+    <main className={style.contentInfoPerfil}>
+      <section>
+        <h1 className={style.titleInfoPerfil}>Informações do Perfil</h1>
+      </section>
+      <section className={style.contentInfoPerfil}>
+        <span className={style.spanInfoPerfil}>
+          <figure className={style.contentInfoPerfilFoto}>
+            <ImgPerfil width={200} />
+          </figure>
+          <div className={style.textInfoPerfil}>
+            <p><em>Nome da Empresa</em></p>
+            <p>Email: <em>exemplo@exemplo.com</em></p>
+            <p>Celular: <em>(xx) xxxxx-xxxx</em> </p>
+          </div>
+          <div className={style.textInfoPerfil}>
+            <p>CNPJ: <em>xx.xxx.xxx/xxxx-xx</em></p>
+            <p>Empresa: <em>Exemplo do Exemplo</em></p>
+          </div>
+        </span>
+      </section>
+      <section className={style.contentInfoPerfil}>  
+        <span className={style.spanInfoPerfil}>
+          <div className={style.textInfoPerfil}>
+            <p>Rua: <em>Exemplo do Exemplo</em></p>
+            <p>Bairro: <em>Exemplo do Exemplo</em></p>
+          </div>
+          <div className={style.textInfoPerfil}>
+            <p>Cidade: <em>Exemplo do Exemplo</em></p>
+            <p>Estado: <em>Exemplo do Exemplo</em></p>
+          </div>
+          <div className={style.textInfoPerfil}>
+            <p>CEP: <em>xxxxx-xxx</em></p>
+          </div>
+        </span>
+      </section>
+    </main>
+  )
+}

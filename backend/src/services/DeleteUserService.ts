@@ -5,29 +5,29 @@ interface DeleteUserProps {
 }
 
 class DeleteUserService{
-    async execute({ id }: DeleteUserProps){
-        if(!id) {
-            throw new Error("Solicitação inválida!");
-        }
+	async execute({ id }: DeleteUserProps){
+		if(!id) {
+			throw new Error("ID do usuário não informado!!");
+		}
 
-        const findUser = await prismaClient.customer.findFirst({
-            where: {
-                id: id
-            }
-        })
+		const findUser = await prismaClient.user.findUnique({
+			where: {
+				id: id
+			}
+		})
 
-        if(!findUser) {
-            throw new Error("User não encontrada!");
-        }
+		if(!findUser) {
+			throw new Error("Usuário não encontrado!");
+		}
 
-        await prismaClient.customer.delete({
-            where: {
-                id: findUser.id
-            }
-        })
+		await prismaClient.user.delete({
+			where: {
+				id: findUser.id
+			}
+		})
 
-        return { message: "User deletado com sucesso!" };
-    }
+		return { message: "Usuário deletado com sucesso!" };
+	}
 }
 
 export { DeleteUserService };
