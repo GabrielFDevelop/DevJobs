@@ -33,9 +33,11 @@
 			justify-items: center;
 			flex-direction: column;
 			
-			.listLogin{
-				justify-items: center;
+			.formLogin{
+				display: flex;
+				align-items: center;
 				padding: 0px 0 20px 0;
+				flex-direction: column;
 		
 				.inputEmail{
 					margin: 5px 0 20px 0;
