@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import { Header } from '../components/header';
+import { Footer } from '../components/footer';
 import { Metadata } from 'next'
 
 // Metadados da aplicação web
@@ -37,6 +38,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

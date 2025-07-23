@@ -8,13 +8,13 @@ import ImgDevJ from './headerIcons/imgIconDevJ/imgIconDevJ';
 
 export function Header(){
 	return (
-		<header className="flex px-2 py-4 bg-gray-700 text-white">
+		<header className="flex px-2 py-4 bg-gradient-to-br from-gray-800 to-blue-900 to-gradient text-white">
 			<div className='flex items-center justify-between w-full'>
-				<div  className='pl-10'>
+				<div  className='pl-10  hover:scale-x-110 transition-all duration-600'>
 					<Link href={"/"} >
 						<span	className="flex items-center gap-2">
 							<ImgDevJ width={60} />
-							<h2 className='text-3xl font-bold'>DevJobs</h2>
+							<h2 className='text-5xl font-extrabold text-justify'>DevJobs</h2>
 						</span>
 					</Link>
 				</div>
@@ -34,30 +34,6 @@ export function Header(){
 									<span className="flex items-center gap-2">
 										Vagas
 										<ImgVagas width={60} />
-									</span>
-								</Link>
-							</li>
-							<li className='flex items-center gap-1 '>
-								<Link href={"/cadastro"} className='text-white mr-3 text-2xl hover:text-gray-300 transform-3d hover:scale-105 transition-all duration-400 ease-in-out'>
-									<span className="flex items-center gap-2">
-										Cadastre-se
-										<ImgBoxCadastro width={60} />
-									</span>
-								</Link>
-							</li>
-							<li className='flex items-center gap-1 '>
-								<Link href={"/login"} className='text-white mr-3 text-2xl hover:text-gray-300 transform-3d hover:scale-105 transition-all duration-400 ease-in-out'>
-									<span className="flex items-center gap-2">
-										Login
-										<ImgBoxLogin width={60} />
-									</span>
-								</Link>
-							</li>
-							<li className='flex items-center gap-1 '>
-								<Link href={"/perfil"} className='text-white mr-3 text-2xl hover:text-gray-300 transform-3d hover:scale-105 transition-all duration-400 ease-in-out'>
-									<span className="flex items-center gap-2">
-										Perfil
-										<ImgPerfil width={60} />
 									</span>
 								</Link>
 							</li>
