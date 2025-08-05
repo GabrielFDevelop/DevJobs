@@ -67,6 +67,8 @@ export default async function Vagas() {
 											<option value="junior">Junior</option>
 											<option value="pleno">Pleno</option>
 											<option value="senior">Senior</option>
+											<option value="especialista">Especialista</option>
+											<option value="techlead">Tech Lead</option>
 										</select>
 									</label>
 									<label htmlFor="" className='flex flex-col font-extrabold gap-2 mb-4'>
@@ -83,7 +85,13 @@ export default async function Vagas() {
 							<button type="submit" className='bg-blue-950 hover:bg-blue-800 hover:cursor-pointer text-white font-bold py-2 px-15 border border-blue-950 rounded-lg translate-x-240 shadow-2xl'>Buscar</button>
 						</div>
 					</div>
-					<article className='flex flex-col border text-white border-blue-800 rounded-2xl shadow-2xl h-162 w-320 gap-6 py-15 px-15 overflow-y-scroll scroll-behavior-smooth'>
+					<article className='flex flex-col text-white mt-10 gap-5'>
+						<h3 className='text-center text-4xl font-extrabold'>Não encontrou sua vaga?</h3>
+						<p className='text-center font-bold'>Altere os dados de filtragem ou cadastre uma nova vaga clicando <a href="/vagas/cadastrarVaga" className='text-blue-200 underline hover:text-blue-400'>aqui</a>
+						</p>
+					</article>
+
+					{/* <article className='flex flex-col border text-white border-blue-800 rounded-2xl shadow-2xl h-162 w-320 gap-6 py-15 px-15 overflow-y-scroll scroll-behavior-smooth'>
 						<h2 className='text-center text-4xl font-extrabold'>Titulo da Vaga</h2>
 						<div className='flex flex-col gap-4'>
 							<h3 className='text-start text-3xl font-bold'>Descrição da Vaga</h3>
@@ -105,7 +113,7 @@ export default async function Vagas() {
 							<h3 className='text-start text-3xl font-bold'>Como se candidatar</h3>
 							<p className='text-start text-2xl font-medium'>Detalhes</p>
 						</div>
-					</article>
+					</article> */}
 				</article>
 			</div>
 		</main>
