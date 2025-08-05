@@ -6,7 +6,7 @@ export default function Home(){
         <article className='flex items-center justify-center mb-20 mt-20'>
           <h1 className='text-6xl text-blue-200 font-extrabold'>Sobre o Projeto</h1>
         </article>
-        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-40 pr-40 mb-7 gap-150 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
+        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-20 pr-20 mb-7 gap-100 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
           <h2 className='flex text-4xl font-extrabold text-nowrap pl-20 text-blue-50'>Qual o propósito do projeto?</h2>
           <p className='flex text-2xl font-bold text-justify text-white'>
             Este projeto tem como propósito criar e apresentar vagas disponíveis no mercado para desenvolvedores. 
@@ -20,7 +20,7 @@ export default function Home(){
           </p>
         </article>
 
-        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-40 pr-40 mb-7 gap-150 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
+        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-20 pr-20 mb-7 gap-100 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
           <span className='flex flex-col text-2xl items-center justify-center gap-5 pl-5'>
             <p className='font-bold text-justify text-white'>
               Para procurar a vaga ideal, você pode acessar a página de vagas na aba de pesquisa ou o link abaixo para ser redirecionado e assim utilizar os 
@@ -33,7 +33,7 @@ export default function Home(){
           <h2 className='text-4xl font-extrabold text-blue-50 text-nowrap pr-20'>Como encontrar as vagas para você?</h2>
         </article>
         
-        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-40 pr-40 mb-7 gap-150 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
+        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-20 pr-20 mb-7 gap-100 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
           <h2 className='text-4xl font-extrabold text-nowrap text-blue-50 pl-20'>Como cadastrar uma vaga?</h2>
           <span className='flex flex-col text-2xl items-center justify-center gap-5 pl-5'>
             <p className='text-2xl font-bold text-justify text-white'>
@@ -47,12 +47,12 @@ export default function Home(){
           </span>
         </article>
 
-        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-40 pr-40 mb-7 gap-150 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
+        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-20 pr-20 mb-7 gap-100 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
           <p className='flex text-2xl font-bold text-justify text-white'>Texto sobre tecnologias.</p>
           <h2 className='text-4xl font-extrabold text-nowrap text-blue-50'>Quais tecnologias foram utilizadas?</h2>
         </article>
 
-        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-40 pr-40 mb-7 gap-150 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
+        <article className='flex w-full align-center justify-center items-center pt-15 pb-15 pl-20 pr-20 mb-7 gap-100 shadow-2xl border-t border-b border-blue-950 rounded-2xl hover:border-blue-800 hover:scale-101 hover:transition-all duration-400'>
           <h2 className='text-4xl font-extrabold text-nowrap text-blue-50'>Quem desenvolveu o projeto?</h2>
           <p className='text-2xl font-bold text-justify text-white'>Texto sobre os desenvolvedores.</p>
         </article>
