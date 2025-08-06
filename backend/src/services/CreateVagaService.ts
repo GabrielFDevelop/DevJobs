@@ -4,7 +4,7 @@ interface VagaRequest {
   titulo: string;
   descricao: string;
   cargo: string;
-  experiencia: string;
+  senioridade: string;
   modalidade: string;
   empresa: string;
   cnpj: string;

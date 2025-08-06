@@ -5,7 +5,7 @@ interface CreateVagaBody {
   titulo: string;
   descricao: string;
   cargo: string;
-  experiencia: string;
+  senioridade: string;
   modalidade: string;
   empresa: string;
   cnpj: string;
@@ -18,31 +18,31 @@ export class CreateVagaController {
   async register(request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> {
     try {
     const {
-      tituloVaga,
-      descricaoVaga,
-      cargoVaga,
-      experienciaVaga,
-      modalidadeVaga,
-      empresaVaga,
-      cnpjVaga,
-      localizacaoVaga,
-      salarioVaga,
-      beneficiosVaga,
+      titulo,
+      descricao,
+      cargo,
+      senioridade,
+      modalidade,
+      empresa,
+      cnpj,
+      localizacao,
+      salario,
+      beneficios,
     } = request.body as any;
 
     const service = new CreateVagaService();
 
     const vaga = await service.execute({
-      titulo: tituloVaga,
-      descricao: descricaoVaga,
-      cargo: cargoVaga,
-      experiencia: experienciaVaga,
-      modalidade: modalidadeVaga,
-      empresa: empresaVaga,
-      cnpj: cnpjVaga,
-      localizacao: localizacaoVaga,
-      salario: salarioVaga,
-      beneficios: beneficiosVaga,
+      titulo: titulo,
+      descricao: descricao,
+      cargo: cargo,
+      senioridade: senioridade,
+      modalidade: modalidade,
+      empresa: empresa,
+      cnpj: cnpj,
+      localizacao: localizacao,
+      salario: salario,
+      beneficios: beneficios,
     });
 
       return reply.status(201).send(vaga);

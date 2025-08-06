@@ -19,7 +19,7 @@ model vaga {
   titulo       String
   descricao    String
   cargo        String
-  experiencia  String
+  senioridade  String?
   modalidade   String
   empresa      String
   cnpj         String
