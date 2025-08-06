@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 
 export default function CadastrarVaga() {
+
+  // Estado para armazenar os dados do formulário
   const [formData, setFormData] = useState({
     tituloVaga: '',
     descricaoVaga: '',
@@ -16,7 +18,8 @@ export default function CadastrarVaga() {
     beneficiosVaga: ''
   });
 
-  const handleChange = (e) => {
+  // Função para atualizar o estado conforme o usuário digita
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -24,31 +27,45 @@ export default function CadastrarVaga() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  // Função para lidar com o envio do formulário
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Aqui você pode enviar os dados para uma API
     console.log('Dados da vaga:', formData);
+    try {
+      // Aqui você pode enviar os dados para uma API
+      const response = await fetch('http://localhost:3001/registerVaga', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
 
-    fetch('/localhost:3001/registerVaga', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    });
+      if (!response.ok){
+        const errorText = await response.text();
+        console.error('Erro ao cadastrar vaga:', errorText);
+        throw new Error('Erro ao cadastrar vaga');
+        return;
+      }
 
-    // Resetar o formulário (opcional)
-    setFormData({
-      tituloVaga: '',
-      descricaoVaga: '',
-      cargoVaga: '',
-      experienciaVaga: '',
-      modalidadeVaga: '',
-      empresaVaga: '',
-      cnpjVaga: '',
-      localizacaoVaga: '',
-      salarioVaga: '',
-      beneficiosVaga: ''
-    });
+      // Resetar o formulário (opcional)
+      alert('Vaga cadastrada com sucesso!');
+      setFormData({
+        tituloVaga: '',
+        descricaoVaga: '',
+        cargoVaga: '',
+        experienciaVaga: '',
+        modalidadeVaga: '',
+        empresaVaga: '',
+        cnpjVaga: '',
+        localizacaoVaga: '',
+        salarioVaga: '',
+        beneficiosVaga: ''
+      });
+    }catch (error: any) {
+      console.error('Erro ao cadastrar vaga:', error);
+      alert(`Erro ao cadastrar vaga: ${error?.message || error}`);
+      return;
+    }
   };
 
   return (
@@ -63,7 +80,7 @@ export default function CadastrarVaga() {
           <label htmlFor='tituloVaga' className='flex flex-col text-white font-extrabold gap-2'>
             Título da Vaga
             <input
-              name="titulo"
+              name="tituloVaga"
               value={formData.tituloVaga}
               onChange={handleChange}
               type="text" 
@@ -75,7 +92,7 @@ export default function CadastrarVaga() {
           <label htmlFor='descricaoVaga' className='flex flex-col text-white font-extrabold gap-2'>
             Descrição
             <textarea 
-              name="descricao" 
+              name="descricaoVaga" 
               value={formData.descricaoVaga}
               onChange={handleChange}
               placeholder='Descreva a vaga' 
@@ -87,7 +104,7 @@ export default function CadastrarVaga() {
             <label htmlFor='cargoVaga' className='flex flex-col text-white font-extrabold gap-2'>
               Cargo
               <select 
-                name="cargo" 
+                name="cargoVaga" 
                 value={formData.cargoVaga}
                 onChange={handleChange}
                 className='bg-gray-200 text-black font-normal w-80 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl appearance-none cursor-pointer'
@@ -105,7 +122,7 @@ export default function CadastrarVaga() {
             <label htmlFor='experienciaVaga' className='flex flex-col text-white font-extrabold gap-2'>
               Experiência
               <select 
-                name="experiencia" 
+                name="experienciaVaga" 
                 value={formData.experienciaVaga}
                 onChange={handleChange}
                 className='bg-gray-200 text-black font-normal w-80 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl appearance-none cursor-pointer'
@@ -122,7 +139,7 @@ export default function CadastrarVaga() {
             <label htmlFor='modalidadeVaga' className='flex flex-col text-white font-extrabold gap-2'>
               Modalidade
               <select 
-                name="modalidade" 
+                name="modalidadeVaga" 
                 value={formData.modalidadeVaga}
                 onChange={handleChange}
                 className='bg-gray-200 text-black font-normal w-80 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl appearance-none cursor-pointer'
@@ -138,7 +155,7 @@ export default function CadastrarVaga() {
           <label htmlFor='empresaVaga' className='flex flex-col text-white font-extrabold gap-2'>
             Empresa
             <input 
-              name="empresa"
+              name="empresaVaga"
               value={formData.empresaVaga}
               onChange={handleChange}
               type="text" 
@@ -150,7 +167,7 @@ export default function CadastrarVaga() {
           <label htmlFor="cnpjVaga" className='flex flex-col text-white font-extrabold gap-2'>
             CNPJ
             <input 
-              name="cnpj"
+              name="cnpjVaga"
               value={formData.cnpjVaga}
               onChange={handleChange}
               type="text" 
@@ -162,7 +179,7 @@ export default function CadastrarVaga() {
           <label htmlFor='localizacaoVaga' className='flex flex-col text-white font-extrabold gap-2'>
             Localização
             <input 
-              name='localizacao'
+              name='localizacaoVaga'
               value={formData.localizacaoVaga}
               onChange={handleChange}
               type="text" 
@@ -174,7 +191,7 @@ export default function CadastrarVaga() {
           <label htmlFor='salarioVaga' className='flex flex-col text-white font-extrabold gap-2'>
             Salário
             <input 
-              name='salario'
+              name='salarioVaga'
               value={formData.salarioVaga}
               onChange={handleChange}
               type="text" 
@@ -186,7 +203,7 @@ export default function CadastrarVaga() {
           <label htmlFor='beneficiosVaga' className='flex flex-col text-white font-extrabold gap-2'>
             Benefícios
             <textarea 
-              name='beneficios'
+              name='beneficiosVaga'
               value={formData.beneficiosVaga}
               onChange={handleChange}
               placeholder='Digite os benefícios oferecidos' 
