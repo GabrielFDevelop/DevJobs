@@ -6,16 +6,16 @@ export default function CadastrarVaga() {
 
   // Estado para armazenar os dados do formulário
   const [formData, setFormData] = useState({
-    tituloVaga: '',
-    descricaoVaga: '',
-    cargoVaga: '',
-    experienciaVaga: '',
-    modalidadeVaga: '',
-    empresaVaga: '',
-    cnpjVaga: '',
-    localizacaoVaga: '',
-    salarioVaga: '',
-    beneficiosVaga: ''
+    titulo: '',
+    descricao: '',
+    cargo: '',
+    senioridade: '',
+    modalidade: '',
+    empresa: '',
+    cnpj: '',
+    localizacao: '',
+    salario: '',
+    beneficios: ''
   });
 
   // Função para atualizar o estado conforme o usuário digita
@@ -50,16 +50,16 @@ export default function CadastrarVaga() {
       // Resetar o formulário (opcional)
       alert('Vaga cadastrada com sucesso!');
       setFormData({
-        tituloVaga: '',
-        descricaoVaga: '',
-        cargoVaga: '',
-        experienciaVaga: '',
-        modalidadeVaga: '',
-        empresaVaga: '',
-        cnpjVaga: '',
-        localizacaoVaga: '',
-        salarioVaga: '',
-        beneficiosVaga: ''
+        titulo: '',
+        descricao: '',
+        cargo: '',
+        senioridade: '',
+        modalidade: '',
+        empresa: '',
+        cnpj: '',
+        localizacao: '',
+        salario: '',
+        beneficios: ''
       });
     }catch (error: any) {
       console.error('Erro ao cadastrar vaga:', error);
@@ -77,37 +77,40 @@ export default function CadastrarVaga() {
       </article>
       <article className='p-10'>
         <form onSubmit={handleSubmit} className='flex flex-col gap-5 justify-center items-center w-full rounded-lg shadow-lg'>
-          <label htmlFor='tituloVaga' className='flex flex-col text-white font-extrabold gap-2'>
+          <label htmlFor='titulo' className='flex flex-col text-white font-extrabold gap-2'>
             Título da Vaga
             <input
-              name="tituloVaga"
-              value={formData.tituloVaga}
+              name="titulo"
+              value={formData.titulo}
               onChange={handleChange}
               type="text" 
               placeholder='Digite o título da vaga' 
               className='bg-gray-200 text-black font-normal text-start w-150 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl' 
+              required
             />
           </label>
 
-          <label htmlFor='descricaoVaga' className='flex flex-col text-white font-extrabold gap-2'>
+          <label htmlFor='descricao' className='flex flex-col text-white font-extrabold gap-2'>
             Descrição
             <textarea 
-              name="descricaoVaga" 
-              value={formData.descricaoVaga}
+              name="descricao" 
+              value={formData.descricao}
               onChange={handleChange}
               placeholder='Descreva a vaga' 
-              className='bg-gray-200 text-black font-normal text-start w-250 h-60 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl'>
+              className='bg-gray-200 text-black font-normal text-start w-250 h-60 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl'
+              required>
             </textarea>
           </label>
 
           <div className='flex flex-row gap-5 justify-between'>
-            <label htmlFor='cargoVaga' className='flex flex-col text-white font-extrabold gap-2'>
+            <label htmlFor='cargo' className='flex flex-col text-white font-extrabold gap-2'>
               Cargo
               <select 
-                name="cargoVaga" 
-                value={formData.cargoVaga}
+                name="cargo" 
+                value={formData.cargo}
                 onChange={handleChange}
                 className='bg-gray-200 text-black font-normal w-80 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl appearance-none cursor-pointer'
+                required
               >
                 <option value="">Selecione o cargo</option>
                 <option value="devBack">Desenvolvedor Back-End</option>
@@ -119,92 +122,98 @@ export default function CadastrarVaga() {
               </select>
             </label>
 
-            <label htmlFor='experienciaVaga' className='flex flex-col text-white font-extrabold gap-2'>
-              Experiência
+            <label htmlFor='senioridade' className='flex flex-col text-white font-extrabold gap-2'>
+              Senioridade
               <select 
-                name="experienciaVaga" 
-                value={formData.experienciaVaga}
+                name="senioridade" 
+                value={formData.senioridade}
                 onChange={handleChange}
                 className='bg-gray-200 text-black font-normal w-80 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl appearance-none cursor-pointer'
+                required
               >
                 <option value="">Selecione o nível de experiência</option>
-                <option value="junior">Junior</option>
-                <option value="pleno">Pleno</option>
-                <option value="senior">Senior</option>
-                <option value="especialista">Especialista</option>
-                <option value="techlead">Tech Lead</option>
+                <option value="Junior">Junior</option>
+                <option value="Pleno">Pleno</option>
+                <option value="Senior">Senior</option>
+                <option value="Especialista">Especialista</option>
+                <option value="TechLead">Tech Lead</option>
               </select>
             </label>
 
-            <label htmlFor='modalidadeVaga' className='flex flex-col text-white font-extrabold gap-2'>
+            <label htmlFor='modalidade' className='flex flex-col text-white font-extrabold gap-2'>
               Modalidade
               <select 
-                name="modalidadeVaga" 
-                value={formData.modalidadeVaga}
+                name="modalidade" 
+                value={formData.modalidade}
                 onChange={handleChange}
                 className='bg-gray-200 text-black font-normal w-80 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl appearance-none cursor-pointer'
+                required
               >
                 <option value="">Selecione a modalidade</option>
-                <option value="presencial">Presencial</option>
-                <option value="remoto">Remoto</option>
-                <option value="hibrido">Híbrido</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Remoto">Remoto</option>
+                <option value="Hibrido">Híbrido</option>
               </select>
             </label>
           </div>
 
-          <label htmlFor='empresaVaga' className='flex flex-col text-white font-extrabold gap-2'>
+          <label htmlFor='empresa' className='flex flex-col text-white font-extrabold gap-2'>
             Empresa
             <input 
-              name="empresaVaga"
-              value={formData.empresaVaga}
+              name="empresa"
+              value={formData.empresa}
               onChange={handleChange}
               type="text" 
               placeholder='Digite o nome da empresa' 
-              className='bg-gray-200 text-black font-normal text-start w-250 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl' 
+              className='bg-gray-200 text-black font-normal text-start w-250 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl'
+              required 
             />
           </label>
 
-          <label htmlFor="cnpjVaga" className='flex flex-col text-white font-extrabold gap-2'>
+          <label htmlFor="cnpj" className='flex flex-col text-white font-extrabold gap-2'>
             CNPJ
             <input 
-              name="cnpjVaga"
-              value={formData.cnpjVaga}
+              name="cnpj"
+              value={formData.cnpj}
               onChange={handleChange}
               type="text" 
               placeholder='Digite o CNPJ da empresa' 
               className='bg-gray-200 text-black font-normal text-start w-250 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl' 
+              required
             />
           </label>
 
-          <label htmlFor='localizacaoVaga' className='flex flex-col text-white font-extrabold gap-2'>
+          <label htmlFor='localizacao' className='flex flex-col text-white font-extrabold gap-2'>
             Localização
             <input 
-              name='localizacaoVaga'
-              value={formData.localizacaoVaga}
+              name='localizacao'
+              value={formData.localizacao}
               onChange={handleChange}
               type="text" 
               placeholder='Digite a localização da vaga' 
               className='bg-gray-200 text-black font-normal text-start w-250 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl'
+              required
             />
           </label>
 
-          <label htmlFor='salarioVaga' className='flex flex-col text-white font-extrabold gap-2'>
+          <label htmlFor='salario' className='flex flex-col text-white font-extrabold gap-2'>
             Salário
             <input 
-              name='salarioVaga'
-              value={formData.salarioVaga}
+              name='salario'
+              value={formData.salario}
               onChange={handleChange}
               type="text" 
               placeholder='Digite a média salarial' 
               className='bg-gray-200 text-black font-normal text-start w-250 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl' 
+              required
             />
           </label>
 
-          <label htmlFor='beneficiosVaga' className='flex flex-col text-white font-extrabold gap-2'>
+          <label htmlFor='beneficios' className='flex flex-col text-white font-extrabold gap-2'>
             Benefícios
             <textarea 
-              name='beneficiosVaga'
-              value={formData.beneficiosVaga}
+              name='beneficios'
+              value={formData.beneficios}
               onChange={handleChange}
               placeholder='Digite os benefícios oferecidos' 
               className='bg-gray-200 text-black font-normal text-start w-250 h-30 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl' 
