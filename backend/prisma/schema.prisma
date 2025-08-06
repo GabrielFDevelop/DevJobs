@@ -14,14 +14,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
-  email String  @unique
-  password String
-  status Boolean
-  createdAt DateTime? @default(now())
-  updatedAt DateTime  @updatedAt
-
-  @@map("users")
+model vaga {
+  id           String @id @default(auto()) @map("_id") @db.ObjectId //define o campo id como um ObjectId do MongoDB
+  titulo       String
+  descricao    String
+  cargo        String
+  experiencia  String
+  modalidade   String
+  empresa      String
+  cnpj         String
+  localizacao  String
+  salario      String
+  beneficios   String
+  createdAt    DateTime @default(now())
 }

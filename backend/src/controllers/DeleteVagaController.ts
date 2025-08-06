@@ -1,12 +1,12 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { DeleteUserService } from '../services/DeleteUserService';
+import { DeleteVagaService } from '../services/DeleteVagaService';
 
-class DeleteUserController{
+class DeleteVagaController{
 	async handle(request: FastifyRequest, reply: FastifyReply) {
 		const { id } = request.query as { id: string };
 
 		try {
-			const service = new DeleteUserService();
+			const service = new DeleteVagaService();
 			const result = await service.execute({ id });
 			return reply.status(200).send(result);
 		} catch (error: any) {
@@ -15,4 +15,4 @@ class DeleteUserController{
 	}
 }
 
-export { DeleteUserController };
+export { DeleteVagaController };

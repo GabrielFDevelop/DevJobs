@@ -24,10 +24,10 @@ const start = async () => {
   await app.register(fastifyCors, {
     origin: true,
   });
-  await app.register(routes);
   await app.register(fastifyJwt, {
     secret: '123'// coloque isso em .env depois!
   });
+  await app.register(routes);
 
   try{
     await app.listen({ port: 3001 })
