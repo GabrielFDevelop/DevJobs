@@ -1,19 +1,19 @@
-interface VagasProps {
-	id: string;
-	titulo: string;
-	empresa: string;
-	cargo: string;
-	senioridade: string;
-	modalidade: string;
-	localizacao: string;
-}
+'use client';
 
-export default async function Vagas() {
+import React, { useState, useEffect } from 'react';
+import AsideVagas from '@/components/vagasPage/aside';
+import DescriptionVagas from '@/components/vagasPage/description';
+import { VagasProps } from '../utils/interface';
 
-	const response = await fetch('http://localhost:3001/listVagas', {cache: 'no-store'});  // chamando a api e desabilitando o cache
-	const data = await response.json();
-	
-	const vagas: VagasProps[] = Array.isArray(data) ? data : []; // convertendo para json
+export default function Vagas() {
+  const [vagas, setVagas] = useState<VagasProps[]>([]);
+  const [vagaSelecionada, setVagaSelecionada] = useState<VagasProps | null>(null);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/listVagas', { cache: 'no-store' })
+      .then(res => res.json())
+      .then(data => setVagas(Array.isArray(data) ? data : []));
+  }, []);
 	
 	return(
 		<main className='flex flex-col justify-center align-center'>
@@ -23,30 +23,7 @@ export default async function Vagas() {
 
 			<div className='flex flex-row gap-5 mb-20 mx-20'>
 
-				<aside className='flex flex-col items-center border border-blue-800 rounded-2xl shadow-2xl h-250 py-10 w-180 overflow-y-scroll'>
-					<div className='flex items-center justify-center w-full pb-10 border-b border-blue-950 rounded-2xl shadow-2xl px-25'>
-						<h2 className='text-center text-white font-bold text-4xl'>Escolha uma vaga</h2>
-					</div>
-					<div className='flex flex-col w-full justify-center gap-4 p-4 border-b-2 border-blue-500 rounded-2xl shadow-2xl'>
-						{vagas.length === 0 ? (
-              <span className="text-white font-bold">Nenhuma vaga cadastrada.</span>
-            ) : (
-              vagas.map((vaga) => (
-								<div key={vaga.id} className='flex flex-col gap-1 text-white'>
-									<h3 className='text-center font-bold'>
-										{vaga.titulo}
-										{vaga.senioridade && <span className='text-gray-400'> - {vaga.senioridade}</span>}
-									</h3>
-									<div className='flex flex-col items-start'>
-										{vaga.modalidade && <span><b>Modalidade: </b>{vaga.modalidade}</span>}
-										{vaga.empresa && <span><b>Empresa: </b>{vaga.empresa}</span>}
-										{vaga.localizacao && <span><b>Localização: </b>{vaga.localizacao}</span>}
-									</div>
-              	</div>
-								))
-            )}
-					</div>
-				</aside>
+				<AsideVagas vagas={vagas} onSelect={setVagaSelecionada} />
 
 				<article className='flex flex-col items-center gap-3'>
 					<div className='flex flex-row items-center text-white  border border-blue-800 rounded-2xl shadow-2xl h-85 w-320 py-15 px-15'>
@@ -61,6 +38,7 @@ export default async function Vagas() {
 											className='bg-gray-500 font-bold text-start w-120 px-5 py-3 border border-blue-950 rounded-lg shadow-2xl' 
 										/>
 									</label>
+
 									<label htmlFor="" className='flex flex-col font-extrabold gap-2 mb-4 w-80'>
 										Data de Abertura
 										<input 
@@ -68,6 +46,7 @@ export default async function Vagas() {
 											className='bg-gray-500 font-bold px-15 py-3 border border-blue-950 rounded-lg shadow-2xl' 
 										/>
 									</label>
+
 									<label htmlFor="" className='flex flex-col font-extrabold gap-2 mb-4'>
 										Localização
 										<input 
@@ -77,6 +56,7 @@ export default async function Vagas() {
 										/>
 									</label>
 								</div>
+
 								<div className='flex flex-row gap-7 ml-8'>
 									<label htmlFor="" className='flex font-extrabold flex-col gap-2 mb-4'>
 										Cargo
@@ -90,6 +70,7 @@ export default async function Vagas() {
 											<option value="devDevops">DevOps</option>
 										</select>
 									</label>
+
 									<label htmlFor="" className='flex flex-col font-extrabold gap-2 mb-4'>
 										Senioridade
 										<select name="senioridade" id="" className='flex font-bold bg-gray-500 w-60 px-12 py-3 border border-blue-950 rounded-lg shadow-2xl appearance-none cursor-pointer'>
@@ -101,6 +82,7 @@ export default async function Vagas() {
 											<option value="TechLead">Tech Lead</option>
 										</select>
 									</label>
+
 									<label htmlFor="" className='flex flex-col font-extrabold gap-2 mb-4'>
 										Modalidade
 										<select name="modalidade" id="" className='flex font-bold bg-gray-500 w-60 px-12 py-3 border border-blue-950 rounded-lg shadow-2xl appearance-none cursor-pointer'>
@@ -112,40 +94,21 @@ export default async function Vagas() {
 									</label>
 								</div>
 							</form>
+
 							<button type="submit" className='bg-blue-950 hover:bg-blue-800 hover:cursor-pointer text-white font-bold py-2 px-15 border border-blue-950 rounded-lg translate-x-240 shadow-2xl'>Buscar</button>
+						
 						</div>
 					</div>
-					<article className='flex flex-col text-white mt-10 gap-5'>
-						<h3 className='text-center text-4xl font-extrabold'>Não encontrou sua vaga?</h3>
-						<p className='text-center font-bold'>Altere os dados de filtragem ou cadastre uma nova vaga clicando <a href="/vagas/cadastrarVaga" className='text-blue-200 underline hover:text-blue-400'>aqui</a>
-						</p>
-					</article>
 
-					{/* <article className='flex flex-col border text-white border-blue-800 rounded-2xl shadow-2xl h-162 w-320 gap-6 py-15 px-15 overflow-y-scroll scroll-behavior-smooth'>
-						<h2 className='text-center text-4xl font-extrabold'>Titulo da Vaga</h2>
-						<div className='flex flex-col gap-4'>
-							<h3 className='text-start text-3xl font-bold'>Descrição da Vaga</h3>
-							<p className='text-start text-2xl font-medium'>Detalhes</p>
-						</div>
-						<div>
-							<h3 className='text-start text-3xl font-bold'>Requisitos</h3>
-							<p className='text-start text-2xl font-medium'>Detalhes</p>
-						</div>
-						<div>
-							<h3 className='text-start text-3xl font-bold'>Benefícios</h3>
-							<p className='text-start text-2xl font-medium'>Detalhes</p>
-						</div>
-						<div>
-							<h3 className='text-start text-3xl font-bold'>Informações Adicionais</h3>
-							<p className='text-start text-2xl font-medium'>Detalhes</p>
-						</div>
-						<div>
-							<h3 className='text-start text-3xl font-bold'>Como se candidatar</h3>
-							<p className='text-start text-2xl font-medium'>Detalhes</p>
-						</div>
-					</article> */}
+					<DescriptionVagas vaga={vagaSelecionada} />
+					
 				</article>
 			</div>
 		</main>
 	)
 }
+// <article className='flex flex-col text-white mt-10 gap-5'>
+// 	<h3 className='text-center text-4xl font-extrabold'>Não encontrou sua vaga?</h3>
+// 	<p className='text-center font-bold'>Altere os dados de filtragem ou cadastre uma nova vaga clicando <a href="/vagas/cadastrarVaga" className='text-blue-200 underline hover:text-blue-400'>aqui</a>
+// 	</p>
+// </article>

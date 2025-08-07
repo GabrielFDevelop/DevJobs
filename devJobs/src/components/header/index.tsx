@@ -5,7 +5,7 @@ import ImgDevJ from './headerIcons/imgIconDevJ/imgIconDevJ';
 
 export function Header(){
 	return (
-		<header className="flex justify-center align-center px-2 border-b-2 border-blue-800 border-gradient bg-gradient-to-br from-gray-800 to-blue-900 to-gradient text-white">
+		<header className="flex justify-center align-center px-2 border-b-2 border-blue-700 border-gradient bg-linear-to-br from-blue-9500 to-blue-700 to-gradient text-white">
 			<div className='flex flex-row justify-center items-center w-full gap-50'>
 				<div  className='pl-10 flex items-center hover:scale-x-110 transition-all duration-600'>
 					<Link href={"/"} >
